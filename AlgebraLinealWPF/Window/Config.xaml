@@ -1,0 +1,12 @@
+﻿<c:MetroWindow x:Class="AlgebraLinealWPF.Window.Config"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        ResizeMode="NoResize"
+        Title="Configuracion" Height="126.545" Width="209.455">
+    <Grid>
+        <Label Content="Especifique el numero de Variables" Margin="0,0,0,72" />
+        <c:NumericUpDown Height="30" Margin="10,26,10,34" Name="Num" Minimum="1" Maximum="100" Interval="1" />
+        <Button Margin="75,0,75,4" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Ok" Width="52" Name="Ok" />
+    </Grid>
+</c:MetroWindow>

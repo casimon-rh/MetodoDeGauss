@@ -1,0 +1,14 @@
+/*.suo
+/AlgebraLineal/obj
+/AlgebraLineal/bin
+/AlgebraLinealConsole/bin
+/AlgebraLinealConsole/obj
+/AlgebraLinealWPF/obj
+/AlgebraLinealWPF/bin
+/Testing/bin
+/Testing/obj
+/MahApps/Metro/obj
+/MahApps/Metro/bin
+/MahApps/Metro/*.pfx
+/MahApps/Metro/*.user
+/MahApps/Metro/*.nuspec

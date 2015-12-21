@@ -1,0 +1,18 @@
+﻿<c:MetroWindow x:Class="AlgebraLinealWPF.Window.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Menu" Height="300" Width="300" WindowState="Maximized" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" Grid.Row="0" Style="{DynamicResource SquareButtonStyle}" Content="Eliminación de Gauss" Name="Gauss" />
+        <Button Grid.Column="1" Grid.Row="1" Style="{DynamicResource SquareButtonStyle}" Content="Operaciones con Matrices" Name="Matriz" />
+    </Grid>
+</c:MetroWindow>

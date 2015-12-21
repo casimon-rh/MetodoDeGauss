@@ -1,0 +1,14 @@
+﻿<c:MetroWindow x:Class="AlgebraLinealWPF.Window.Matrices"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Operaciones de Matrices" Height="428.364" Width="567.273">
+    <Grid>
+        <DataGrid Width="234" Height="174" Name="M1" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <Button Style="{DynamicResource SquareButtonStyle}" Width="40" Height="40" Content="+" Margin="259,43,260,314" FontSize="20"/>
+        <DataGrid Height="174" x:Name="M2" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="234" />
+        <DataGrid Width="300" x:Name="M3" Margin="0,0,0,10" HorizontalAlignment="Center" Height="174" VerticalAlignment="Bottom" />
+        <Button Style="{DynamicResource SquareButtonStyle}" Width="40" Height="40" Content="X" Margin="259,99,260,258" FontSize="20"/>
+        <Button Style="{DynamicResource SquareButtonStyle}" Width="40" Height="40" Content="I" Margin="259,156,260,201" FontSize="20"/>
+    </Grid>
+</c:MetroWindow>

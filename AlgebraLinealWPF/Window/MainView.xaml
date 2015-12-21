@@ -1,0 +1,21 @@
+﻿<c:MetroWindow x:Class="AlgebraLinealWPF.Window.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Title="Eliminacion" Height="506.227" Width="701.864" ResizeMode="CanResizeWithGrip">
+    <c:MetroWindow.RightWindowCommands>
+        <c:WindowCommands>
+            <Button x:Name="Config" Content="Configuracion" Click="Config_Click" />
+        </c:WindowCommands>
+    </c:MetroWindow.RightWindowCommands>
+    <Grid>
+        <DataGrid Name="Sistema" Margin="30,35,30,0" Height="151" VerticalAlignment="Top" ItemsSource="{Binding Path=dt}" />
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Style="{DynamicResource SquareButtonStyle}" Content="Calcular" Margin="304,207,309,236" Width="81" Height="32" Click="Button_Click"/>
+        <Grid Margin="74,0,74,10" Height="205" VerticalAlignment="Bottom" >
+            <ScrollViewer>
+                <TextBlock TextWrapping="Wrap" Height="499" VerticalAlignment="Bottom"  Name="Result"/>
+            </ScrollViewer>
+        </Grid>
+
+    </Grid>
+</c:MetroWindow>

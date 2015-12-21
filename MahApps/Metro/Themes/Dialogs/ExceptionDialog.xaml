@@ -1,0 +1,69 @@
+﻿<Dialogs:BaseMetroDialog xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:Dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs"
+                         x:Class="MahApps.Metro.Controls.Dialogs.ExceptionDialog"
+                         Loaded="Dialog_Loaded">
+    
+    <Grid Margin="0 10 0 0" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="PART_AffirmativeButton"
+                    Height="45"
+                    Width="60"
+                    FontSize="{StaticResource DialogMessageFontSize}"
+                    Style="{DynamicResource AccentedDialogSquareButton}"
+                    Content="Cerrar"
+                Margin="0 5 0 5">
+        </Button>
+        <ScrollViewer Grid.Row="1" MaxHeight="200">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Height="554">
+                
+                <TextBlock Height="85" x:Name="Mensaje"
+                    Margin="0 5 0 5 "
+                    FontSize="{StaticResource DialogMessageFontSize}"
+                    Text="{Binding Path=Ex.Message, RelativeSource={RelativeSource AncestorType=Dialogs:ExceptionDialog, Mode=FindAncestor}, UpdateSourceTrigger=PropertyChanged}"
+                    TextWrapping="Wrap"
+                    Foreground="Black" MinWidth="80" Background="#FFF1F1F1"  />
+                <Expander Height="150"
+                          MinWidth="140"
+                          Header="Stack Trace">
+                    <ScrollViewer>
+                        <Grid Height="364">
+                            <TextBlock 
+                                x:Name="StackTrace"
+                                Text="{Binding Path=Ex.StackTrace, RelativeSource={RelativeSource AncestorType=Dialogs:ExceptionDialog, Mode=FindAncestor}, UpdateSourceTrigger=PropertyChanged}" 
+                                TextWrapping="Wrap" Background="#FFF1F1F1" />
+                        </Grid>
+                    </ScrollViewer>
+                </Expander>
+                <TextBlock
+                    Margin="0 5 0 5 "
+                    FontSize="{StaticResource DialogMessageFontSize}"
+                    Text="Inner Exception"
+                    TextWrapping="Wrap"
+                    Foreground="Black" />
+                <TextBlock Text="{Binding Ex.InnerException.Message}"
+                    Margin="0 5 0 5 "
+                            FontSize="{StaticResource DialogMessageFontSize}"
+                            TextWrapping="Wrap"
+                            Height="85" MinWidth="80"
+                            x:Name="InnerMensaje"
+                            Foreground="Black" Background="#FFF1F1F1" />
+                <Expander Height="150"
+                          MinWidth="140"
+                          Header="Inner Stack Trace">
+                    <ScrollViewer>
+                        <Grid Height="364">
+                            <TextBlock  
+                                x:Name="InnerStackTrace"
+                                Text="{Binding Path=Ex.InnerException.StackTrace, RelativeSource={RelativeSource AncestorType=Dialogs:ExceptionDialog, Mode=FindAncestor}, UpdateSourceTrigger=PropertyChanged}" 
+                                TextWrapping="Wrap" Background="#FFF1F1F1" />
+                        </Grid>
+                    </ScrollViewer>
+                </Expander>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Dialogs:BaseMetroDialog>
